@@ -15,9 +15,8 @@ Caches your Django ORM queries and automatically invalidates them.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/django-cachalot-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/django-cachalot-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/django-cachalot-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/django-cachalot-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/django-cachalot-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/django-cachalot-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/django-cachalot-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/django-cachalot-feedstock)
 
 Current release info
 ====================
