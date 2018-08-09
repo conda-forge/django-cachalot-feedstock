@@ -1,6 +1,6 @@
 {% set name = "django-cachalot" %}
-{% set version = "2.0.2" %}
-{% set sha256 = "69026fc3a8bde5f44f53bd5a475f53cf48dd3a80bd725f2aa09dc271bcc62776" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "2da574b7e88890243ad048883fd95789b9d7be895642ff6fb531c71672f3994b" %}
 
 package:
   name: {{ name|lower }}
