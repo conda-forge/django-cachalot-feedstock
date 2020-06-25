@@ -1,6 +1,6 @@
 {% set name = "django-cachalot" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "2da574b7e88890243ad048883fd95789b9d7be895642ff6fb531c71672f3994b" %}
+{% set version = "2.2.2" %}
+{% set sha256 = "df6452f844a1e82bd0b9d203bb226026c71b0e9cf573645b66c696e4b2eb2862" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - django >=1.8
-    
+
 test:
   imports:
     - cachalot
