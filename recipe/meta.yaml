@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django-cachalot-{{ version }}.tar.gz
-  sha256: 2fe9366d558c6e33339777d70b0cf4acddfb7e0fe00fed4f72cb13d70fa4825
+  sha256: 2fe9366d558c6e33339777d70b0cf4acddfb7e0fe00fed4f72cb13d70fa4825b
 
 build:
   noarch: python
