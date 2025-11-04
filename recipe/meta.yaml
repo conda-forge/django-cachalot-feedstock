@@ -1,35 +1,36 @@
 {% set name = "django-cachalot" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "2da574b7e88890243ad048883fd95789b9d7be895642ff6fb531c71672f3994b" %}
+{% set version = "2.3.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django-cachalot-{{ version }}.tar.gz
+  sha256: 2fe9366d558c6e33339777d70b0cf4acddfb7e0fe00fed4f72cb13d70fa4825
 
 build:
   noarch: python
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - pip
     - python {{ python_min }}
+    - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }},<4.0
     - django >=1.8
     
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - cachalot
+  commands:
+    - pip check
 
 about:
   home: https://github.com/BertrandBordage/django-cachalot
@@ -44,5 +45,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - rxm7706
     - cshaley
     - sannykr
