@@ -1,5 +1,5 @@
 {% set name = "django-cachalot" %}
-{% set version = "2.8.0" %}
+{% set version = "2.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_cachalot-{{ version }}.tar.gz
-  sha256: 30456720ac9f3fabeb90ce898530fe01130c25a1eca911cd016cfaeab251d627
+  sha256: 67d3d19a3f6deab7dc5b081b5f78ea926318f64a7b3afb06f28e61d8d31e02b3
 
 build:
   noarch: python
@@ -20,8 +20,11 @@ requirements:
     - pip
     - setuptools
   run:
+    - django-debug-toolbar
+    - jinja2
     - python >={{ python_min }},<4.0
-    - django >=3.2,<5.3
+    - django >=4.2,<6.1
+    # - Django <6.1,>=4.2
 
 test:
   requires:
